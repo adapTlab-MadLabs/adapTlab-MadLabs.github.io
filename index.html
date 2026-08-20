@@ -703,12 +703,14 @@ showcaseEl.addEventListener('mouseenter', () => clearInterval(showcaseTimer));
 showcaseEl.addEventListener('mouseleave', startShowcaseAutoplay);
 
 // Team grid
-const teamGrid = document.getElementById('teamGrid');
 teamMembers.forEach(m => {
   const el = document.createElement('div');
   el.className = 'member-card';
+  const photo = m.img
+    ? `<img src="${m.img}" alt="Portrait of ${m.name}">`
+    : '';
   el.innerHTML = `
-    <div class="hex-frame" role="img" aria-label="Portrait placeholder for ${m.name}"></div>
+    <div class="hex-frame" role="img" aria-label="Portrait of ${m.name}">${photo}</div>
     <h4>${m.name}</h4>
     <div class="role">${m.role}</div>
     <p>${m.bio}</p>`;
