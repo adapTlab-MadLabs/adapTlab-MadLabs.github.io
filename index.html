@@ -703,6 +703,7 @@ showcaseEl.addEventListener('mouseenter', () => clearInterval(showcaseTimer));
 showcaseEl.addEventListener('mouseleave', startShowcaseAutoplay);
 
 // Team grid
+const teamGrid = document.getElementById('teamGrid');
 teamMembers.forEach(m => {
   const el = document.createElement('div');
   el.className = 'member-card';
