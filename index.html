@@ -268,6 +268,26 @@ main{ flex:1; margin-left:264px; min-height:100vh; position:relative; }
   padding:26px 30px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
 }
 
+   .partners-section{
+  margin-top:50px;
+}
+.partners-section h2{ font-size:1.4rem; margin-bottom:20px; }
+.partners-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:24px;
+}
+.partner-logo{
+  background:#fff; border:1px solid var(--gray-line); border-radius:14px;
+  padding:24px; display:flex; align-items:center; justify-content:center;
+  height:100px; transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.partner-logo:hover{ transform:translateY(-3px); box-shadow:0 12px 24px -16px rgba(10,47,78,.3); }
+.partner-logo img{ max-width:100%; max-height:60px; object-fit:contain; filter:grayscale(1); opacity:.75; transition:.25s; }
+.partner-logo:hover img{ filter:grayscale(0); opacity:1; }
+
+@media (max-width: 720px){
+  .partners-grid{ grid-template-columns:repeat(2,1fr); }
+}
+
 /* ============================================================
    RESEARCH PAGE
 ============================================================ */
@@ -500,14 +520,15 @@ footer.page-footer p{ font-size:.8rem; color:var(--gray-mid); }
         </div>
         <div class="team-grid" id="teamGrid"></div>
 
-        <div class="join-note">
-          <div>
-            <h4 style="font-size:1rem;">Photos and bios are placeholders</h4>
-            <p style="font-size:.85rem; margin-top:4px;">Swap in real team photos and write-ups whenever you're ready — the hexagon frames will auto-crop any image you drop in.</p>
-          </div>
-          <a href="#" class="btn btn-ghost" data-page-link="join">See open positions</a>
-        </div>
-      </div>
+       <div class="partners-section">
+  <h2>Partnerships</h2>
+  <div class="partners-grid">
+    <div class="partner-logo"><img src="images/partner1.png" alt="Partner 1 name"></div>
+    <div class="partner-logo"><img src="images/partner2.png" alt="Partner 2 name"></div>
+    <div class="partner-logo"><img src="images/partner3.png" alt="Partner 3 name"></div>
+    <div class="partner-logo"><img src="images/partner4.png" alt="Partner 4 name"></div>
+  </div>
+</div>
     </section>
 
     <!-- ============ RESEARCH ============ -->
