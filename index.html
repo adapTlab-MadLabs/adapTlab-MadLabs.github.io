@@ -395,7 +395,7 @@ main{ flex:1; margin-left:264px; min-height:100vh; position:relative; }
     height:56px;
   }
 }
-}
+
 
 /* ============================================================
    RESEARCH PAGE
@@ -483,29 +483,8 @@ footer.page-footer p{ font-size:.8rem; color:var(--gray-mid); }
   .process-steps{ grid-template-columns:1fr; }
 }
 
-@media (max-width: 720px){
-  .sidebar{ transform:translateX(-100%); transition: transform .35s var(--ease); box-shadow:0 0 40px rgba(0,0,0,.3); }
-  .sidebar.open{ transform:translateX(0); }
-  main{ margin-left:0; }
-  .topbar{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 20px; background:var(--navy-deep); color:#fff; position:sticky; top:0; z-index:40;
-  }
-  .topbar .brand{ padding:0; }
-  .topbar .brand img{ width:32px; height:32px; }
-  .topbar .brand-text{ font-size:.92rem; }
-  .hamburger{ background:none; border:none; display:flex; flex-direction:column; gap:5px; padding:6px; }
-  .hamburger span{ width:22px; height:2px; background:#fff; border-radius:2px; }
-  .scrim{ display:none; position:fixed; inset:0; background:rgba(8,25,42,.5); z-index:45; }
-  .scrim.show{ display:block; }
-  .container{ padding:0 22px; }
-  .hero{ padding:40px 22px; }
-  .hero h1{ font-size:2.1rem; }
-  .mission-band{ padding:44px 22px; }
-  .team-grid{ grid-template-columns:1fr; }
-  .research-item{ grid-template-columns:1fr; }
-  .research-item .hex-frame{ width:56px; height:56px; }
-}
+
+
 </style>
 </head>
 <body>
