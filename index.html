@@ -745,18 +745,6 @@ newsItems.forEach(n => {
   newsTimeline.appendChild(el);
 });
 
-// Openings
-const openingsList = document.getElementById('openingsList');
-openings.forEach(o => {
-  const el = document.createElement('div');
-  el.className = 'opening-card';
-  const pillClass = o.status === 'open' ? 'status-open' : 'status-rolling';
-  const pillText = o.status === 'open' ? 'Open' : 'Rolling basis';
-  el.innerHTML = `
-    <div><h4>${o.title}</h4><div class="meta">${o.meta}</div></div>
-    <span class="status-pill ${pillClass}">${pillText}</span>`;
-  openingsList.appendChild(el);
-});
 
 /* ============================================================
    PAGE NAVIGATION
